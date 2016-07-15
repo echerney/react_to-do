@@ -17,8 +17,9 @@ As of now, we've only tested our routes to see if they function properly. Now, l
 Since we're only building an API and NOT serving/receiving HTML, we'll only need `body-parser` to read the json sent to us.
 
 1. `npm install body-parser --save`
-1. Inside `server.js`, require these two packages.
-1. Add the following block to activate them each:
+1. Inside `server.js`, require `body-parser`.
+1. Add the following block to activate it:
+
 ```javascript
 // parse incoming json
 app.use( bodyParser.json()); 
