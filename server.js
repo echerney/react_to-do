@@ -13,7 +13,7 @@ const app           = express()
 
 app.use(express.static(path.join(__dirname,'public')));
 app.use(logger('dev'));
-app.use( bodyParser.json());
+app.use(bodyParser.json());
 
 app.listen(PORT, ()=>
   console.log('All systems go! Port:', PORT)
@@ -22,8 +22,6 @@ app.listen(PORT, ()=>
 //ROUTES
 
 app.use('/tasks', tasksRoutes);
-
-
 app.get('/' , (req,res)=>
   res.send('show the homepage')
 );
